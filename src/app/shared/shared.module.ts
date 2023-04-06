@@ -22,6 +22,7 @@ import { CartSummaryComponent } from './cart-summary/cart-summary.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[HeaderComponent]
 })
 export class SharedModule { }

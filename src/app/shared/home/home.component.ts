@@ -1,3 +1,4 @@
+import { ItemService } from 'src/app/core/item.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  myproduct: any;
+
+  constructor(private itemService:ItemService){}
+
+  
+  ngOnInit(): void {
+    this.itemService.getAllProducts().subscribe((res) => {
+      console.log(res);
+      this.myproduct = res;
+    })
+  }
 
 }
