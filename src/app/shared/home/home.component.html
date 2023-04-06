@@ -1,7 +1,7 @@
 <div>
     <div class="container">
-        <div class="row" id="explore-menu-section-items">
-            <app-product [myproduct] ="myproduct" *ngFor="let product of myproduct"></app-product>   
+        <div class="row">
+            <app-product class="col-12 col-md-6 col-lg-3" [myproducts]="myproduct" *ngFor="let myproduct of myproduct"></app-product>
         </div>
     </div>
 </div>
